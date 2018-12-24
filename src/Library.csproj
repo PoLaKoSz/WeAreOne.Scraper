@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>PoLaKoSz.WeAreOne</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Tom PoLáKoSz</Authors>
+    <PackageProjectUrl>https://github.com/PoLaKoSz/WeAreOne.Scraper</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/PoLaKoSz/WeAreOne.Scraper</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>weareone weareone.fm netstandard wrapper api scraper techobase clubtime coretime hardbase housetime teatime trancebase fm tracklist</PackageTags>
+    <PackageLicenseUrl>https://github.com/PoLaKoSz/WeAreOne.Scraper/LICENSE</PackageLicenseUrl>
+    <PackageId>PoLaKoSz.WeAreOne.Scraper</PackageId>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageReleaseNotes>First stable release. The enty point to the library is the WeAreOne class.</PackageReleaseNotes>
+    <Description>WeAreOne is a radio station family hosted in Germany. Probably the most famous radio station is the TechnoBase.FM, but there are 6 more: ClubTime.FM, CoreTime.FM, HardBase.FM, HouseTime.FM, TeaTime.FM and TranceBase.FM. With this library You can access all 7 radio's tracklist.</Description>
+    <Version>1.0.0</Version>
+    <AssemblyName>WeAreOne.Scraper</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.8.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+</Project>
