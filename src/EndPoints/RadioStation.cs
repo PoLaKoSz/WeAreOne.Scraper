@@ -15,12 +15,22 @@ namespace PoLaKoSz.WeAreOne.EndPoints
     public class RadioStation : EndPoint
     {
         /// <summary>
+        /// The full name of the station. For ex.: technobase, teatime, etc.
+        /// </summary>
+        public string Name { get; }
+
+
+
+        /// <summary>
         /// Initialize a new instance to access a radio.
         /// </summary>
         /// <param name="endPoint">Non null string.</param>
         /// <param name="httpClient">Non null object to access the web.</param>
         public RadioStation(string endPoint, IHttpClient httpClient)
-            : base(endPoint, httpClient) { }
+            : base(endPoint, httpClient)
+        {
+            Name = endPoint;
+        }
 
 
 
