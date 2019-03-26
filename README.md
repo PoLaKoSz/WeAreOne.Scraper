@@ -1,5 +1,10 @@
 # WeAreOne.Scraper
 
+[![Build Status](https://travis-ci.com/PoLaKoSz/WeAreOne.Scraper.svg?branch=master)](https://travis-ci.com/PoLaKoSz/WeAreOne.Scraper)
+[![Latest Stable Version](https://img.shields.io/github/tag/PoLaKoSz/WeAreOne.Scraper.svg?label=stable)](../../releases)
+[![Total Downloads](https://img.shields.io/nuget/dt/PoLaKoSz.WeAreOne.Scraper.svg?style=plastic)](https://www.nuget.org/packages/PoLaKoSz.WeAreOne.Scraper)
+[![License](https://img.shields.io/github/license/PoLaKoSz/WeAreOne.Scraper.svg?style=plastic)](LICENSE)
+
 WeAreOne is a radio station family hosted in Germany. Probably the most famous radio station is the TechnoBase.FM, but there are 6 more:
 ClubTime.FM, CoreTime.FM, HardBase.FM, HouseTime.FM, TeaTime.FM and TranceBase.FM. With this library You can access all 7 radio's tracklist. 
 
