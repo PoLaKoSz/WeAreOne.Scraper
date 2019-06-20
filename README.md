@@ -1,5 +1,6 @@
 # WeAreOne.Scraper
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c2d3a55cef8646bfbb644280011b88ec)](https://www.codacy.com/app/PoLaKoSz/WeAreOne.Scraper?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PoLaKoSz/WeAreOne.Scraper&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.com/PoLaKoSz/WeAreOne.Scraper.svg?branch=master)](https://travis-ci.com/PoLaKoSz/WeAreOne.Scraper)
 [![Latest Stable Version](https://img.shields.io/github/tag/PoLaKoSz/WeAreOne.Scraper.svg?label=stable)](../../releases)
 [![Total Downloads](https://img.shields.io/nuget/dt/PoLaKoSz.WeAreOne.Scraper.svg?style=plastic)](https://www.nuget.org/packages/PoLaKoSz.WeAreOne.Scraper)
