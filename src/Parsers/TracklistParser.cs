@@ -18,9 +18,10 @@ namespace PoLaKoSz.WeAreOne.Parsers
             htmlDoc.LoadHtml(sourceCode);
 
             var songNodes = htmlDoc.DocumentNode.SelectNodes("//div[@class='news2']/div/table/tbody/tr/th");
-
             if (songNodes == null)
+            {
                 throw new NodeNotFoundException("Couldn't find songs with the given XPath!");
+            }
 
             var tracks = new List<Music>();
 

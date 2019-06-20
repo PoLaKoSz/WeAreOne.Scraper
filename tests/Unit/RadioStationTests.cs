@@ -1,35 +1,30 @@
 ﻿using NUnit.Framework;
+using System.Collections;
 
 namespace PoLaKoSz.MusicFM.Tests.Unit
 {
     class RadioStationTests
     {
-        private static readonly object[] _names;
-
-
-
-        static RadioStationTests()
-        {
-            var scraper = new WeAreOne.WeAreOne();
-
-            _names = new object[]
-            {
-                new object[] { "clubtime",   scraper.ClubTime.Name },
-                new object[] { "coretime",   scraper.CoreTime.Name },
-                new object[] { "hardbase",   scraper.HardBase.Name },
-                new object[] { "housetime",  scraper.HouseTime.Name },
-                new object[] { "teatime",    scraper.TeaTime.Name },
-                new object[] { "technobase", scraper.TechoBase.Name },
-                new object[] { "trancebase", scraper.TranceBase.Name },
-            };
-        }
-
-
-
-        [TestCaseSource(nameof(_names))]
-        public void Name_Property(string expected, string actual)
+        [TestCaseSource(typeof(StationNames))]
+        public void NamePropertyDidNotChanged(string expected, string actual)
         {
             Assert.AreEqual(expected, actual);
+        }
+
+        class StationNames : IEnumerable
+        {
+            public IEnumerator GetEnumerator()
+            {
+                var scraper = new WeAreOne.WeAreOne();
+
+                yield return new object[] { "clubtime", scraper.ClubTime.Name };
+                yield return new object[] { "coretime", scraper.CoreTime.Name };
+                yield return new object[] { "hardbase", scraper.HardBase.Name };
+                yield return new object[] { "housetime", scraper.HouseTime.Name };
+                yield return new object[] { "teatime", scraper.TeaTime.Name };
+                yield return new object[] { "technobase", scraper.TechoBase.Name };
+                yield return new object[] { "trancebase", scraper.TranceBase.Name };
+            }
         }
     }
 }
