@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace PoLaKoSz.WeAreOne.Models
 {
@@ -6,7 +7,7 @@ namespace PoLaKoSz.WeAreOne.Models
     /// Used when the artist and the song title is not
     /// seperated in a recognizable format.
     /// </summary>
-    public class Music
+    public class Music : IEquatable<Music>
     {
         /// <summary>
         /// Full name of the song (artist(s) name + song title).
@@ -27,34 +28,48 @@ namespace PoLaKoSz.WeAreOne.Models
 
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-        public override bool Equals(object obj)
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+        public bool Equals(Music other)
         {
-            if (obj == null)
+            if (other == null)
+            {
                 return false;
+            }
 
-            if (GetType() != obj.GetType())
+            if (!Name.Equals(other.Name))
+            {
                 return false;
-
-            var anotoherMusic = (Music)obj;
-
-            if (!Name.Equals(anotoherMusic.Name))
-                return false;
+            }
 
             return true;
         }
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            if (GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            var another = (Music)obj;
+
+            return Equals(another);
+        }
+
         public override int GetHashCode()
         {
             return 539060726 + EqualityComparer<string>.Default.GetHashCode(Name);
         }
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public override string ToString()
         {
             // Leave it like this for Unit tests!!
             return Name;
         }
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     }
 }

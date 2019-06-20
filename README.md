@@ -8,13 +8,13 @@
 WeAreOne is a radio station family hosted in Germany. Probably the most famous radio station is the TechnoBase.FM, but there are 6 more:
 ClubTime.FM, CoreTime.FM, HardBase.FM, HouseTime.FM, TeaTime.FM and TranceBase.FM. With this library You can access all 7 radio's tracklist. 
 
-### Install
+## Install
 via [NuGet](https://www.nuget.org/packages/PoLaKoSz.WeAreOne.Scraper/)
-````
+```` shell
 PM > Install-Package PoLaKoSz.WeAreOne.Scraper
 ````
 
-### Quick start
+## Quick start
 
 That's all You need and can use with this library. Copied from the sample project:
 

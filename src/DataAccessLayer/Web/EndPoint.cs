@@ -25,7 +25,7 @@ namespace PoLaKoSz.WeAreOne.DataAccessLayer.Web
         /// </summary>
         /// <param name="endPoint">Non null string.</param>
         /// <param name="httpClient">Non null object.</param>
-        public EndPoint(string endPoint, IHttpClient httpClient)
+        protected EndPoint(string endPoint, IHttpClient httpClient)
         {
             _baseAddress = new Uri("http://" + endPoint + ".fm/");
 
@@ -52,7 +52,9 @@ namespace PoLaKoSz.WeAreOne.DataAccessLayer.Web
             byte[] byteArray = await response.Content.ReadAsByteArrayAsync();
 
             if (response.StatusCode != HttpStatusCode.OK)
+            {
                 throw new HttpRequestException($"HTTP {response.StatusCode} returned while loading {uriBuilder.Uri}");
+            }
 
             // For future Integration tests
             //System.IO.File.WriteAllBytes($"{uriBuilder.Host}.html", byteArray);
