@@ -11,37 +11,37 @@ namespace PoLaKoSz.WeAreOne
         /// <summary>
         /// Access the TechoBase.FM page.
         /// </summary>
-        public RadioStation TechoBase { get; }
+        public IRadioStation TechoBase { get; }
 
         /// <summary>
         /// Access the HouseTime.FM page.
         /// </summary>
-        public RadioStation HouseTime { get; }
+        public IRadioStation HouseTime { get; }
 
         /// <summary>
         /// Access the HardBase.FM page.
         /// </summary>
-        public RadioStation HardBase { get; }
+        public IRadioStation HardBase { get; }
 
         /// <summary>
         /// Access the TranceBase.FM page.
         /// </summary>
-        public RadioStation TranceBase { get; }
+        public IRadioStation TranceBase { get; }
 
         /// <summary>
         /// Access the CoreTime.FM page.
         /// </summary>
-        public RadioStation CoreTime { get; }
+        public IRadioStation CoreTime { get; }
 
         /// <summary>
         /// Access the ClubTime.FM page.
         /// </summary>
-        public RadioStation ClubTime { get; }
+        public IRadioStation ClubTime { get; }
 
         /// <summary>
         /// Access the TeaTime.FM page.
         /// </summary>
-        public RadioStation TeaTime { get; }
+        public IRadioStation TeaTime { get; }
 
 
 

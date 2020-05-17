@@ -1,22 +1,23 @@
-﻿using HtmlAgilityPack;
-using PoLaKoSz.WeAreOne.DataAccessLayer.Web;
+﻿using PoLaKoSz.WeAreOne.DataAccessLayer.Web;
 using PoLaKoSz.WeAreOne.Models;
 using PoLaKoSz.WeAreOne.Parsers;
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace PoLaKoSz.WeAreOne.EndPoints
 {
     /// <summary>
-    /// Class to access one of the WeAreOne subradio.
+    /// Class to access one of the WeAreOne radio station.
+    /// <para>This class will be removed from the public API in the 2.0 release!
+    /// Please use the <see cref="IRadioStation"/> interface instead!
+    /// </para>
     /// </summary>
-    public class RadioStation : EndPoint
+    [Obsolete("This class will be removed from the public API in the 2.0 release!" +
+        " Please use the IRadioStation interface instead!", error: false)]
+    public class RadioStation : EndPoint, IRadioStation
     {
-        /// <summary>
-        /// The full name of the station. For ex.: technobase, teatime, etc.
-        /// </summary>
+        /// <inheritdoc />
         public string Name { get; }
 
 
@@ -34,13 +35,7 @@ namespace PoLaKoSz.WeAreOne.EndPoints
 
 
 
-        /// <summary>
-        /// Gets the radio's tracklist.
-        /// </summary>
-        /// <returns>Non null <see cref="Music"/> collection.</returns>
-        /// <exception cref="NodeNotFoundException"></exception>
-        /// <exception cref="HttpRequestException"></exception>
-        /// <exception cref="InvalidCastException"></exception>
+        /// <inheritdoc />
         public async Task<List<Music>> Tracklist()
         {
             string sourceCode = await base.GetAsync("tracklist");

@@ -9,7 +9,7 @@ namespace PoLaKoSz.WeAreOne.Tests.Integration.EndPoints
     class HouseTimeTests : TestClassBase
     {
         private static readonly object[] Tracklist_2018_12_17;
-        private readonly RadioStation _houseTimeFM;
+        private readonly IRadioStation _houseTimeFM;
 
 
 
