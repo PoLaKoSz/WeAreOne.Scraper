@@ -12,10 +12,16 @@
     <PackageLicenseUrl>https://github.com/PoLaKoSz/WeAreOne.Scraper/LICENSE</PackageLicenseUrl>
     <PackageId>PoLaKoSz.WeAreOne.Scraper</PackageId>
     <NeutralLanguage>en</NeutralLanguage>
-    <PackageReleaseNotes>Exposes a new property called Name in the RadioStation class.</PackageReleaseNotes>
+    <PackageReleaseNotes>New interfaces:
+- IWeAreOne (inherited by WeAreOne class)
+- IRadioStation (inherited by RadioStation class)
+
+Deprecate
+- RadioStation class (will be removed in release 2.0, alternative: IRadioStation interface)</PackageReleaseNotes>
     <Description>WeAreOne is a radio station family hosted in Germany. Probably the most famous radio station is the TechnoBase.FM, but there are 6 more: ClubTime.FM, CoreTime.FM, HardBase.FM, HouseTime.FM, TeaTime.FM and TranceBase.FM. With this library You can access all 7 radio's tracklist.</Description>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <AssemblyName>WeAreOne.Scraper</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
