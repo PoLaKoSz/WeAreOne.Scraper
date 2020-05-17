@@ -9,7 +9,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var weAreOne = new WeAreOne();
+            IWeAreOne weAreOne = new WeAreOne();
 
             var tracklist = weAreOne.TechoBase.Tracklist().GetAwaiter().GetResult();
             DisplayTracklist(tracklist, "TechoBase");

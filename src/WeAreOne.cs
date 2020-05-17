@@ -6,7 +6,7 @@ namespace PoLaKoSz.WeAreOne
     /// <summary>
     /// This class is the main entry point for the library.
     /// </summary>
-    public class WeAreOne
+    public class WeAreOne : IWeAreOne
     {
         /// <summary>
         /// Access the TechoBase.FM page.
